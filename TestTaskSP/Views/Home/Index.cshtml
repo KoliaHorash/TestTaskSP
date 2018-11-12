@@ -11,24 +11,25 @@
 </p>
 <table>
     <tr>
-        <th>|Назва файлу|</th>
-        <th>Розмір|</th>
-        <th>IP користувача|</th>
-        <th>Кількість символів в файлі|</th>
-        <th>Кількість слів в файлі|</th>
-        <th>Дата завантаження|</th>
-        <th>Опис|</th>
+        <th>Назва файлу</th>
+        <th>Розмір</th>
+        <th>IP користувача</th>
+        <th>Кількість символів в файлі</th>
+        <th>Кількість слів в файлі</th>
+        <th>Дата завантаження</th>
+        <th>Опис</th>
     </tr>
     @foreach (var file in Model)
     {
     <tr>
-        <th>@file.FileName</th>
-        <th>@file.Size</th>
-        <th>@file.Ip</th>
-        <th>@file.CountSymbols</th>
-        <th>@file.CountWords</th>
-        <th>@file.DateDownload</th>
-        <th>@file.AdditionalInformation</th>
+        <td>@file.FileName</td>
+        <td>@file.Size</td>
+        <td>@file.Ip</td>
+        <td>@file.CountSymbols</td>
+        <td>@file.CountWords</td>
+        <td>@file.DateDownload</td>
+        <td>@file.AdditionalInformation</td>
+        <td>@Html.ActionLink("Edit", "Edit", new { id = file.Id })</td>
     </tr>
     }
 </table>
